@@ -4,18 +4,21 @@ public class Main {
 
     public static void main(String[] args){
 
-        // COMMOM ISSUES WITH SCANNER
+        // calculate area of rectangle
+
+        double width = 0;
+        double height = 0;
+        double area = 0;
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter your age: ");
-        int age = scanner.nextInt();
-        scanner.nextLine(); // gets rid of the input buffer that causes the problem
+        System.out.print("Enter the width: ");
+        width = scanner.nextDouble();
+        System.out.print("Enter the height: ");
+        height = scanner.nextDouble();
 
-        System.out.println("Enter your favourite colour");
-        String colour = scanner.nextLine();
-
-        System.out.println("You are " + age + " years old");
-        System.out.println("You like the colour " + colour);
+        area = height * width;
+        System.out.println("Your area is: " + area + "cm^2");
 
         scanner.close();
     }
