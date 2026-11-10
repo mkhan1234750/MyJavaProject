@@ -1,51 +1,39 @@
+// getting the Scanner package from Java
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args){
+        // Getting User Input with Java
 
-        // Variables = a reusable container for a value
-        //             a variable behaves as if it was the value it contains
+        // The scanner object can now read user input
+        Scanner scanner = new Scanner(System.in);
 
-        // Primitive = simple value stored directly in memory
-        // Reference = memory address (stack) that points to the (heap)
+        System.out.println("Enter your name: ");
 
-        // Primitive vs Reference
-        // ---------    ---------
-        // int       |  string
-        // double    |  array
-        // char      |  object
-        // boolean   |
+        // If you don't want spaces to get user input, you can use the class next() instead
+        String name = scanner.nextLine();
 
-        // 2 steps to creating a variable
-        // ------------------------------
-        // 1. declaration
-        // 2. assignment
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt(); // if I give an input of a double with nextInt class, it will give me an error
 
-        int age = 18;
-        int birthYear = 2008;
-        int quantity = 24;
+        System.out.println("How much money do you have left: ");
+        double moneyLeft = scanner.nextDouble();
 
-        double temperature = 8.5;
-        double price = 5.99;
+        System.out.println("Are you are student? (true/false)");
+        boolean isStudent = scanner.nextBoolean();
 
-        char currency = '£';
-        char grade = 'A';
-
-        boolean isAdult = true;
-        boolean isOnline = false;
-
-        String name = "Mehtaab";
-        String email = "meetmak9@gmail.com";
-
-        System.out.println("My age is " + age);
-        System.out.println("Your birth year is " + birthYear);
-        System.out.println("We only have " + quantity + " left!");
-
-        if (isOnline){
-            System.out.println("You are online!");
+        System.out.println("Hello " + name);
+        System.out.println("You are " + age + " years old");
+        System.out.println("You have £" + moneyLeft + " left");
+        if (isStudent){
+            System.out.println("You are a student");
         }
         else {
-            System.out.println("You are NOT online!");
+            System.out.println("You are NOT a student");
         }
 
+        // it is good practice to close, otherwise it could lead to unexpected behaviour
+        scanner.close();
     }
 }
