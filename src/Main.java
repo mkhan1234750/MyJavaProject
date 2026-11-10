@@ -9,6 +9,7 @@ public class Main {
 
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
+        scanner.nextLine(); // gets rid of the input buffer that causes the problem
 
         System.out.println("Enter your favourite colour");
         String colour = scanner.nextLine();
