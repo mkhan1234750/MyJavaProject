@@ -4,13 +4,27 @@ public class Main {
 
     public static void main(String[] args){
 
-        // Increment and Decrement Operators
+        // SHOPPING CART PROGRAM
 
-        int x = 1;
-        // x++; // it is the same as x += 1; Increment
-        x--; // Same as x -= 1; Decrement
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(x);
+        String item;
+        double price;
+        int quantity;
+        double totalPrice;
 
+        System.out.print("What item would you like to buy?: ");
+        item = scanner.nextLine();
+        System.out.print("What is the price for each?: ");
+        price = scanner.nextDouble();
+        System.out.print("How many would you like?: ");
+        quantity = scanner.nextInt();
+
+        totalPrice = price * quantity;
+
+        System.out.println("\nYou have bought " + quantity + " " + item + "/s");
+        System.out.println("Your total is " + totalPrice);
+
+        scanner.close();
     }
 }
