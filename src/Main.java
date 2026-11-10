@@ -4,18 +4,34 @@ public class Main {
 
         // printf() = is a method used to format output
 
-        String name = "Spongebob";
-        char firstLetter = 'S';
-        int age = 30;
-        double height = 60.5;
-        boolean isEmployed = true;
+        // for precision
+        // --------------
 
-        System.out.printf("Hello %s", name); // %s for string
-        System.out.printf("\nYour name starts with an %c", firstLetter); // %c for chars
-        System.out.printf("\nYou are %d years old", age); // %d is kind of confusing but just gotta remember.
-        System.out.printf("\nYou are %f cm tall", height); // %f for double
-        System.out.printf("\nEmployed: %b", isEmployed); // %b for boolean
+        // + = output a plus
+        // , = comma grouping separator
+        // ( = negative numbers are enclosed in()
+        // space = display a minus if negative, space if positive.
 
-        System.out.printf("\n%s is %d years old", name, age); // you can combine variables aswell.
+        // for width
+        // ---------
+
+        int id1 = 1;
+        int id2 = 23;
+        int id3 = 456;
+        int id4 = 7890;
+
+        System.out.printf("%-4d\n", id1); // width of the variable. pads it out.
+        System.out.printf("%-4d\n", id2);
+        System.out.printf("%-4d\n", id3);
+        System.out.printf("%-4d\n", id4);
+
+        double price1 = 9.99;
+        double price2 = 100.15;
+        double price3 = -54.01;
+
+        System.out.printf("\n% .2f", price1); // the 0.3f is for precision of the rounding up.
+        System.out.printf("\n% .2f", price2);
+        System.out.printf("\n% .2f", price3);
+
     }
 }
