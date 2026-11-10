@@ -4,19 +4,13 @@ public class Main {
 
     public static void main(String[] args){
 
-        // Arithmetic operators
+        // Augmented Assignment Operators
 
         int x = 10;
         int y = 3;
-        int z = 3;
 
-        // Addition z = x + y;
-        // Subtraction z = x - y;
-        // Multiplication z = x * y;
-        // Division z = x / y;
-        // Modulus z = x % y;
-
-        System.out.println(z);
+        x *= y; // This gives only 3 because we are only dealing with integer definition, not doubles.
+        System.out.println(x);
 
     }
 }
