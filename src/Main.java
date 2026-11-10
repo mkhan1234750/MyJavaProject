@@ -4,25 +4,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // HYPOTENUSE OF TRIABLE = Math.sqrt(a^2 + b^2)
+        // Sphere
+
+        // circumference = 2 * Math.PI * radius;
+        // area = Math.PI + Math.pow(radius, 2);
+        // volume = (4.0 / 3.0) * Math.PI + Math.pow(radius, 3)
 
         Scanner scanner = new Scanner(System.in);
 
-        // Sides of triangle
+        double radius;
+        double circumference;
+        double area;
+        double volume;
 
-        double a;
-        double b;
-        double c;
+        System.out.print("Enter the radius: ");
+        radius = scanner.nextDouble();
 
-        System.out.print("Enter side A: ");
-        a = scanner.nextDouble();
+        circumference = 2 * Math.PI * radius;
+        area = Math.PI * Math.pow(radius, 2);
+        volume = (4.0/3.0) * Math.PI + Math.pow(radius, 3);
 
-        System.out.print("Enter side B: ");
-        b = scanner.nextDouble();
-
-        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-
-        System.out.println("The hypotenuse of triangle (Side C) is: " + c);
+        System.out.printf("\nCircumference is: %.1fcm", circumference);
+        System.out.printf("\nArea is: %.1fcm^2", area);
+        System.out.printf("\nVolume is: %.1fcm^3", volume);
 
         scanner.close();
     }
