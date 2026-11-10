@@ -4,27 +4,42 @@ public class Main {
 
     public static void main(String[] args){
 
-        // SHOPPING CART PROGRAM
+        // if statements
 
         Scanner scanner = new Scanner(System.in);
 
-        String item;
-        double price;
-        int quantity;
-        char currency = '£';
-        double totalPrice;
+        String name;
+        int age;
 
-        System.out.print("What item would you like to buy?: ");
-        item = scanner.nextLine();
-        System.out.print("What is the price for each?: ");
-        price = scanner.nextDouble();
-        System.out.print("How many would you like?: ");
-        quantity = scanner.nextInt();
+        // name verification
 
-        totalPrice = price * quantity;
+        System.out.println("What is your name?");
+        name = scanner.nextLine();
 
-        System.out.println("\nYou have bought " + quantity + " " + item + "/s");
-        System.out.println("Your total is " + currency + totalPrice);
+        if (name.isEmpty()){
+            System.out.println("You have not entered your name");
+        }
+        else {
+            System.out.println("Hello " + name);
+        }
+
+        // Age verification
+
+        System.out.println("What is your age: ");
+        age = scanner.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are an adult!");
+        }
+        else if(age < 0){
+            System.out.println("You haven't been born yet");
+        }
+        else if(age == 0){
+            System.out.println("You are a baby!");
+        }
+        else {
+            System.out.println("You are a child!");
+        }
 
         scanner.close();
     }
