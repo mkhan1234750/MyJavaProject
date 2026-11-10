@@ -11,6 +11,7 @@ public class Main {
         String item;
         double price;
         int quantity;
+        char currency = '£';
         double totalPrice;
 
         System.out.print("What item would you like to buy?: ");
@@ -23,7 +24,7 @@ public class Main {
         totalPrice = price * quantity;
 
         System.out.println("\nYou have bought " + quantity + " " + item + "/s");
-        System.out.println("Your total is " + totalPrice);
+        System.out.println("Your total is " + currency + totalPrice);
 
         scanner.close();
     }
