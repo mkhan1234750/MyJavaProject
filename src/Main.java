@@ -1,22 +1,29 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        //System.out.println(Math.PI);
-        //System.out.println(Math.E);
+        // HYPOTENUSE OF TRIABLE = Math.sqrt(a^2 + b^2)
 
-        double result;
+        Scanner scanner = new Scanner(System.in);
 
-        result = Math.pow(2, -0.5);
-        result = Math.abs(-5);
-        result = Math.sqrt(225);
-        result = Math.round(3.14);
-        result = Math.ceil(3.14); // where you round up
-        result = Math.floor(3.99); // where you round down
-        result = Math.max(10, 20); // maximum
-        result = Math.min(10, 20); // minimum
+        // Sides of triangle
 
-        System.out.println(result);
+        double a;
+        double b;
+        double c;
 
+        System.out.print("Enter side A: ");
+        a = scanner.nextDouble();
+
+        System.out.print("Enter side B: ");
+        b = scanner.nextDouble();
+
+        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+        System.out.println("The hypotenuse of triangle (Side C) is: " + c);
+
+        scanner.close();
     }
 }
