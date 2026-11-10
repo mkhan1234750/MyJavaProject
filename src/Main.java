@@ -1,35 +1,21 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        // Sphere
+        // printf() = is a method used to format output
 
-        // circumference = 2 * Math.PI * radius;
-        // area = Math.PI + Math.pow(radius, 2);
-        // volume = (4.0 / 3.0) * Math.PI + Math.pow(radius, 3)
+        String name = "Spongebob";
+        char firstLetter = 'S';
+        int age = 30;
+        double height = 60.5;
+        boolean isEmployed = true;
 
-        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Hello %s", name); // %s for string
+        System.out.printf("\nYour name starts with an %c", firstLetter); // %c for chars
+        System.out.printf("\nYou are %d years old", age); // %d is kind of confusing but just gotta remember.
+        System.out.printf("\nYou are %f cm tall", height); // %f for double
+        System.out.printf("\nEmployed: %b", isEmployed); // %b for boolean
 
-        double radius;
-        double circumference;
-        double area;
-        double volume;
-
-        System.out.print("Enter the radius: ");
-        radius = scanner.nextDouble();
-
-        circumference = 2 * Math.PI * radius;
-        area = Math.PI * Math.pow(radius, 2);
-        volume = (4.0/3.0) * Math.PI + Math.pow(radius, 3);
-
-        System.out.printf("\nCircumference is: %.1fcm", circumference);
-        System.out.printf("\nArea is: %.1fcm^2", area);
-        System.out.printf("\nVolume is: %.1fcm^3", volume);
-
-        scanner.close();
-
-
+        System.out.printf("\n%s is %d years old", name, age); // you can combine variables aswell.
     }
 }
