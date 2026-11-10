@@ -1,46 +1,22 @@
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args){
 
-        // if statements
+        Random random = new Random();
 
-        Scanner scanner = new Scanner(System.in);
+        boolean isHeads;
 
-        String name;
-        int age;
+        isHeads = random.nextBoolean();
 
-        // name verification
+        System.out.println(isHeads);
 
-        System.out.println("What is your name?");
-        name = scanner.nextLine();
-
-        if (name.isEmpty()){
-            System.out.println("You have not entered your name");
+        if(isHeads){
+            System.out.println("HEADS");
         }
-        else {
-            System.out.println("Hello " + name);
+        else{
+            System.out.println("TAILS");
         }
-
-        // Age verification
-
-        System.out.println("What is your age: ");
-        age = scanner.nextInt();
-
-        if (age >= 18) {
-            System.out.println("You are an adult!");
-        }
-        else if(age < 0){
-            System.out.println("You haven't been born yet");
-        }
-        else if(age == 0){
-            System.out.println("You are a baby!");
-        }
-        else {
-            System.out.println("You are a child!");
-        }
-
-        scanner.close();
     }
 }
