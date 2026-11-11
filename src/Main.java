@@ -1,37 +1,35 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        // printf() = is a method used to format output
+        // Compound interest calculator
 
-        // for precision
-        // --------------
+        Scanner scanner = new Scanner(System.in);
 
-        // + = output a plus
-        // , = comma grouping separator
-        // ( = negative numbers are enclosed in()
-        // space = display a minus if negative, space if positive.
+        double principal;
+        double rate;
+        int timesCompounded;
+        int years;
+        double amount;
 
-        // for width
-        // ---------
+        System.out.print("Enter the principal amount: ");
+        principal = scanner.nextDouble();
 
-        int id1 = 1;
-        int id2 = 23;
-        int id3 = 456;
-        int id4 = 7890;
+        System.out.print("Enter the interest rate (in p%): ");
+        rate = scanner.nextDouble() / 100;
 
-        System.out.printf("%-4d\n", id1); // width of the variable. pads it out.
-        System.out.printf("%-4d\n", id2);
-        System.out.printf("%-4d\n", id3);
-        System.out.printf("%-4d\n", id4);
+        System.out.print("Enter the number of times compounded per year: ");
+        timesCompounded = scanner.nextInt();
 
-        double price1 = 9.99;
-        double price2 = 100.15;
-        double price3 = -54.01;
+        System.out.print("Enter the number of years: ");
+        years = scanner.nextInt();
 
-        System.out.printf("\n% .2f", price1); // the 0.3f is for precision of the rounding up.
-        System.out.printf("\n% .2f", price2);
-        System.out.printf("\n% .2f", price3);
+        amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
+        System.out.printf("The amount after %d is £%.2f", years, amount);
+
+        scanner.close();
 
     }
 }
