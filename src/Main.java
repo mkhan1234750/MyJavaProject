@@ -4,17 +4,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // ternary operator ? = Return 1 of 2 values if a condition is true
+        Scanner scanner = new Scanner(System.in);
 
-        // variable = (condition) ? ifTrue : ifFalse;
+        double temp;
+        double newTemp;
+        String unit;
+
+        System.out.print("Enter the temperature: ");
+        temp = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Convert to Celcius or Farenheit? (C or F): ");
+        unit = scanner.nextLine().toUpperCase();
+
+        // (condition) ? true : false
 
 
-        int number = 4;
+        // If unit equals C, then it'll convert to farenheight
+        // Otherwise, it'll convert to Celcius.
+        newTemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 9 / 5) + 32;
 
-        // Checks whether the number is even or odd
+        System.out.printf("%.2f %s", newTemp, unit);
 
-        String evenOrOdd = (number % 2 == 0) ? "EVEN" : "ODD";
+        scanner.close();
 
-        System.out.println(evenOrOdd);
     }
 }
