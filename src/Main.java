@@ -4,32 +4,44 @@ public class Main {
 
     public static void main(String[] args) {
 
-        boolean isStudent = true;
-        boolean isSenior = true;
-        double price = 9.99;
+        String name = "bum";
 
-        if (isStudent){
-            if (isSenior){
-                System.out.println("You get a senior discount of 20%");
-                System.out.println("You get a student discount of 10%");
-                price *= 0.7;
-            }
-            else {
-                System.out.println("You get a student discount of 10%");
-                price *= 0.9;
-            }
+        // int length = name.length();
+        // char letter = name.charAt(1);
+        // int index = name.indexOf("b");
+        // int lastIndex = name.lastIndexOf("b");
+
+        // name = name.toUpperCase();
+        //name = name.toLowerCase();
+        // name = name.trim();
+        //name = name.replace("M", "m");
+
+        /*
+        if (name.isEmpty()){
+            System.out.println("Your name is empty");
         }
         else {
-            if (isSenior) {
-                System.out.println("You get a senior discount of 20%");
-                price *= 0.8;
-            }
-            else {
-                price *= 1;
-            }
+            System.out.println("Hello " + name);
         }
 
-        System.out.printf("The price of a ticket is £%.2f", price);
+         */
+
+        /*
+        if(name.contains(" ")){
+            System.out.println("Your name contains space(s)");
+        }
+        else {
+            System.out.print("Your name doesn't contain any space");
+        }
+
+         */
+
+        if(name.equalsIgnoreCase("bum")){
+            System.out.println("Your name can't be bum");
+        }
+        else {
+            System.out.printf("Hello %s", name);
+        }
 
     }
 }
