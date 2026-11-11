@@ -4,37 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // WEIGHT CONVERSION PROGRAM
+        // ternary operator ? = Return 1 of 2 values if a condition is true
 
-        Scanner scanner = new Scanner(System.in);
+        // variable = (condition) ? ifTrue : ifFalse;
 
-        double weight;
-        double newWeight;
-        int choice;
 
-        System.out.println("Weight Conversion Program");
-        System.out.println("1: Convert lbs to kg");
-        System.out.println("2: Convert kg to lbs");
+        int number = 4;
 
-        System.out.println("Choose an option: ");
-        choice = scanner.nextInt();
+        // Checks whether the number is even or odd
 
-        if (choice == 1){
-            System.out.print("Enter the weight in lbs: ");
-            weight = scanner.nextDouble();
-            newWeight = weight * 0.453592;
-            System.out.printf("The converted weight in kg is: %.2f", newWeight);
-        }
-        else if (choice == 2){
-            System.out.print("Enter the weight in kg: ");
-            weight = scanner.nextDouble();
-            newWeight = weight * 2.20462;
-            System.out.printf("The new weight in lbs is: %.2f", newWeight);
-        }
-        else {
-            System.out.println("No valid choice chosen :/");
-        }
+        String evenOrOdd = (number % 2 == 0) ? "EVEN" : "ODD";
 
-        scanner.close();
+        System.out.println(evenOrOdd);
     }
 }
